@@ -1,0 +1,34 @@
+def __init__(self):
+        self.empid=int(input("id:"))
+        self.empname=input("name:")
+        self.salary=int(input("salary:"))
+        self.depmnt=input("depmnt:")
+    def print_empdetails(self):
+        ids=int(input("enter the id:"))
+        if ids==self.empid:
+            print(f"name:{self.empname},salary:{self.salary},dept:{self.depmnt}")
+        else:
+            print("invaliddata")
+    def calculatesalary(self):
+        hours_worked=int(input("hoursworked:"))
+        if hours_worked>=50:
+            overtime_data = hours_worked - 50
+            Overtime_amount = (overtime_data * (self.salary / 50))
+            self.salary+=Overtime_amount
+            print(self.salary)
+        else:
+            print(self.salary)
+    def assigndept(self):
+        new_dep=input("new deptmnt:")
+        ids=int(input("enter the id:"))
+        if ids==self.empid:
+            self.depmnt=new_dep
+            
+        else:
+            pass
+e=Employee()
+#e.print_empdetails()
+#e.calculatesalary()
+e.assigndept()
+e.print_empdetails()
+e1=Employee()
